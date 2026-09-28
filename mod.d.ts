@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,28 +16,35 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { typedndarray } from '@stdlib/types/ndarray';
 
 /**
-* Compute the mid-range of a one-dimensional ndarray.
+* Computes the mid-range of a one-dimensional ndarray.
 *
-* @module @stdlib/stats-base-ndarray-midrange
+* ## Notes
+*
+* -   The function expects the following ndarrays:
+*
+*     -   a one-dimensional input ndarray.
+*
+* @param arrays - array-like object containing ndarrays
+* @returns mid-range
 *
 * @example
 * var vector = require( '@stdlib/ndarray-vector-ctor' );
-* var midrange = require( '@stdlib/stats-base-ndarray-midrange' );
 *
-* var x = vector( [ 1.0, -2.0, 4.0, 2.0 ], 'generic' );
+* var x = vector( [ 1.0, -2.0, 2.0, 4.0 ], 'generic' );
 *
 * var v = midrange( [ x ] );
 * // returns 1.0
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function midrange( arrays: [ typedndarray<number> ] ): number;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = midrange;
